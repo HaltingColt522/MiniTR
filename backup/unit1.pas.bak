@@ -16,6 +16,7 @@ type
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
+    Button5: TButton;
     Edit1: TEdit;
     Edit2: TEdit;
     Label1: TLabel;
@@ -25,6 +26,7 @@ type
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
   private
     { private declarations }
   public
@@ -81,6 +83,16 @@ begin
 
 
   Label3.caption:=floattostr(ergebnis);
+end;
+
+procedure TForm1.Button5Click(Sender: TObject);
+begin
+  zahl1 := strtoint(Edit1.Text);
+  zahl2 := strtoint(Edit2.text);
+  ergebnis := zahl1 / zahl2^2;
+
+
+  Label3.caption:=inttostr(ergebnis);
 end;
 
 end.
